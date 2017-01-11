@@ -1,0 +1,11 @@
+{% extends 'template.html' %}
+{% block content %}
+
+<div style="clear: both">
+    <h4 style="float: left">{{post['title']}}</h4> 
+    <h5 style="float: right">{{post['tags'][0]}} : {{post['date']}}</h5><br><br>
+    <p>{{post['text']}}</p>
+</div>
+<hr style="clear:both;"/>
+
+{% endblock %}

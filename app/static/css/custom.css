@@ -1,0 +1,47 @@
+/* Space out content a bit */
+body {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: #E8F5E9;
+    align-items: center;
+    color: #2E7D32;
+}
+
+.header {
+    font-weight: bold;
+    text-align: center;
+}
+
+.align-center {
+    text-align:center;
+}
+
+.align-right {
+    text-align: right;
+}
+
+.row {
+    text-align: center;
+}
+
+.border-top {
+    border-top: 1px solid #81C784;
+}
+
+h2 {
+    text-align: center;
+    col
+}
+
+footer {
+    color: #81C784;
+    text-align: center;
+    padding-top: 10px;
+    border-top: 1px solid #81C784;
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 730px;
+  }
+}

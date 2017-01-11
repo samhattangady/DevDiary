@@ -1,0 +1,16 @@
+{% extends "template.html" %}
+{% block content %}
+
+    {% include 'calendar.html' %}
+
+      <!-- Projects -->
+      <div class="container">
+        {% include 'projects.html' %}
+      </div>
+
+      <!-- Blog -->
+      <div class="container">
+        {% include 'blog.html' %}
+      </div>
+
+{% endblock %}

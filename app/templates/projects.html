@@ -1,0 +1,24 @@
+<div class="row">
+  <div class="col-md-6">
+    <h3>Live Projects</h3>
+    <p>
+    {% if not projects['live'] %}
+    No live projects at this point of time
+    {% endif %}
+    {% for project in projects['live'] %}
+      <a href="/{{project['name']}}">{{project['name']}}</a><br>
+    {% endfor %}
+    </p>
+  </div>
+  <div class="col-md-6">
+    <h3>Completed Projects</h3>
+    <p>
+    {% if not projects['completed'] %}
+    No completed projects at this point of time
+    {% endif %}
+    {% for project in projects['completed'] %}
+      <a href="/{{project['name']}}">{{project['name']}}</a><br>
+    {% endfor %}
+    </p>
+  </div>
+</div>
