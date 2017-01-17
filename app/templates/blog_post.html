@@ -2,10 +2,11 @@
 {% block content %}
 
 <div style="clear: both">
-    <h4 style="float: left">{{post['title']}}</h4> 
-    <h5 style="float: right">{{post['tags'][0]}} : {{post['date']}}</h5><br><br>
-    <p>{{post['text']}}</p>
+    <h4 class="header-text" style="float: left">{{post['title']}}</h4> 
+    <h5 class="header-text" style="float: right">{{post['tags'][0]}} : {{post['date']}}</h5><br><br>
+    {% for para in post['text'] %}
+    <p class="regular-text">{{para}}</p>
+    {% endfor %}
 </div>
-<hr style="clear:both;"/>
 
 {% endblock %}

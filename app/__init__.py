@@ -1,15 +1,22 @@
 import math
 import calendar
 import datetime
+import configparser
 
 from flask import Flask, render_template, abort, jsonify
 from pymongo import MongoClient
+
+config = configparser.ConfigParser()
+config.read('config.ini')
 
 TITLE = 'DevDiary - samhattangady'
 BLOG_LIMIT = {'chars': 300, 'number': 2}
 # Did some prototyping in Inkscape. 690*80, 12.5 sq days, 4 rows, 5 months looks good
 CALENDAR_SHOW_MONTHS = 5
 NUMBER_OF_ROWS = 4
+# Picked from Material Design. Purple->Light Blue 100
+COLOURS = ['#E1BEE7', '#D1C4E9', '#C5CAE9', '#BBDEFB', '#B3E5FC']
+MISSED_DAY_COLOUR = '#CFD8DC'
 
 #####################################################################
 # Helper Functions
@@ -48,6 +55,7 @@ def get_blogposts(project=None):
 def get_post(post_id):
     post = db.blogs.find_one({'_id': post_id})
     post['date'] = format_dates(post['date'])
+    post['text'] = post['text'].split('\n')
     return post
 
 # Function returns JSON to be used by canvas object to render calendar heatmap
@@ -106,7 +114,9 @@ def get_calendar(project=None):
 
     final = {'months': [month.strftime('%B \'%y') for month in months], 
              'days': [cal[month] for month in months],
-             'rows': NUMBER_OF_ROWS}
+             'rows': NUMBER_OF_ROWS,
+             'colours': COLOURS,
+             'missed_day': MISSED_DAY_COLOUR}
     return final
 
 # To format datetime.datetime into October 22, 1993 format
@@ -116,8 +126,9 @@ def format_dates(date):
 #####################################################################
 # Server stuff
 #####################################################################
+mongo = str(config.get('database', 'mongohost'))
 app = Flask(__name__)
-db = MongoClient('localhost', 27017).devdiary
+db = MongoClient(mongo).get_default_database()
 
 @app.route('/')
 def home():
@@ -138,7 +149,8 @@ def load_page(project):
                             details=get_project_details(project),
                             title=project+' - '+TITLE,
                             posts=get_blogposts(project),
-                            limit=BLOG_LIMIT)
+                            limit=BLOG_LIMIT,
+                            calendar=get_calendar(project))
 
 @app.route('/blog')
 def blog():
@@ -155,11 +167,13 @@ def blog_post(post_id):
                             title=post['title']+' - '+TITLE,
                             post=post)
 
-@app.route('/calendar')
-def cal():
-    return get_calendar()
-# TODO 
-# @app.route('/<project>/blog')
+@app.route('/<project>/blog')
+def project_blogs(project):
+    return render_template('blog_page.html', 
+                            title='Blog - '+TITLE, 
+                            posts=get_blogposts(project),
+                            limit={'chars': BLOG_LIMIT['chars'],
+                                   'number': None})
 
 
 if __name__ == '__main__':

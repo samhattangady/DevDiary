@@ -2,9 +2,10 @@
 body {
     padding-top: 20px;
     padding-bottom: 20px;
-    background: #E8F5E9;
+    background: #FAFAFA;
     align-items: center;
-    color: #2E7D32;
+    color: #607D8B;
+    link: #FAFAFA;
 }
 
 .header {
@@ -24,19 +25,51 @@ body {
     text-align: center;
 }
 
-.border-top {
-    border-top: 1px solid #81C784;
+.logo-dd, .logo-dd:hover {
+    font-size: 80px;
+    font-family: 'Arvo', serif;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    color: #CFD8DC;
+    text-decoration: none;
+    border: 0!;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.logo-sam {
+    font-size: 30px;
+    margin-top: -50px;
+    font-family: 'Architects Daughter', cursive;
+    color: #B0BEC5;
+}
+
+.logo-desc {
+    margin-top: -17px;
+    padding-bottom: 20px;
+    font-family: 'Arvo', serif;
+    font-size: 13.2px;
 }
 
 h2 {
     text-align: center;
 }
 
+.header-text {
+    font-family: 'Architects Daughter', cursive;
+}
+
+.regular-text {
+    font-family: 'Arvo', serif;
+}
+
 footer {
-    color: #81C784;
+    color: #B0BEC5;
     text-align: center;
     padding-top: 10px;
-    border-top: 1px solid #81C784;
+    border-top: 1px solid #B0BEC5;
 }
 
 @media (min-width: 768px) {

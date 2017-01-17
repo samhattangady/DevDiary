@@ -1,23 +1,22 @@
 {% extends 'template.html' %}
-
 {% block content %}
 
-{% include 'calendar.html' %}
+    {% include 'calendar.html' %}
 
-<div class="container">
-    <h2 class="align-center">{{details['name']}}</h2>
-    <h4 class="align-center">{{details['description']}}</h4>
-    <p class="align-center">{{details['start']}} to {{details['completion']}}</p>
-    <p class="align-center"><a href="{{details['link']}}">{{details['link']}}</a></p>
+    <div class="container">
+        <h2 class="align-center header-text">{{details['name']}}</h2>
+        <h4 class="align-center regular-text">{{details['description']}}</h4>
+        <p class="align-center regular-text">{{details['start']}} to {{details['completion']}}</p>
+        <p class="align-center regular-text"><a href="{{details['link']}}">{{details['link']}}</a></p>
 
-    <div>
-        {% include 'blog.html' %}
+        <div>
+            {% include 'blog.html' %}
+        </div>
+
+        <div >
+            {% for update in details['updates'] %}
+                <p class="regular-text"><b>{{update['date']}}</b>: {{update['text']}}</p>
+            {% endfor %}
+        </div>
     </div>
-
-    <div >
-        {% for update in details['updates'] %}
-            <p><b>{{update['date']}}</b>: {{update['text']}}</p>
-        {% endfor %}
-    </div>
-</div>
 {% endblock %}

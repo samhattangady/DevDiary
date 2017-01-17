@@ -1,11 +1,10 @@
 <!-- Printing out all the posts -->
 {% for post in posts[:limit['number']] %}
     <div style="clear: both">
-        <h4 style="float: left"><a href="/blog/{{post['_id']}}">{{post['title']}}</a></h4> 
-        <h5 style="float: right">{{post['tags'][0]}} : {{post['date']}}</h5><br><br>
-        <p>{{post['text'][:limit['chars']]}}<a href="/blog/{{post['_id']}}">...    (read on)</a></p>
+        <h4 class="header-text" style="float: left"><a href="/blog/{{post['_id']}}">{{post['title']}}</a></h4> 
+        <h5 class="header-text" style="float: right">{{post['tags'][0]}} : {{post['date']}}</h5><br><br>
+        <p class="regular-text">{{post['text'][:limit['chars']]}}<a href="/blog/{{post['_id']}}">...    (read on)</a></p>
     </div>
-    <hr style="clear:both;"/>
 {% endfor %}
 
 <!-- We only want the see more button if there are more posts to be seen.
@@ -13,10 +12,10 @@
      as a[:None] = a. Without this check here, we get an error.-->
 {% if limit['number'] and posts|length > limit['number'] %}
     {% if project %}
-    <p class="align-center"><a href="/{{project}}/blog"><u>See more</u></a></p>
+    <p class="align-center regular-text"><a href="/{{project}}/blog"><u>See more</u></a></p>
     {% endif %}
     {% if not project %}
-    <p class="align-center"><a href="/blog"><u>See more</u></a></p>
+    <p class="align-center regular-text"><a href="/blog"><u>See more</u></a></p>
     {% endif %}
 {% endif %}
 
