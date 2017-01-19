@@ -1,5 +1,4 @@
 #!/home/samhattangady/anaconda3/bin/python
-
 import os
 import argparse
 import datetime
@@ -33,7 +32,7 @@ def add_blogpost(project, title, date, text):
 
 
 def complete_project(project, date):
-    db.projects.update_one({'_id': project['_id']}, {'completion': date})
+    db.projects.update_one({'_id': project['_id']}, {'$set':{'completion': date}})
     return
 
 def new_project(name, description, date, link):

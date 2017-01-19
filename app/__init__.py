@@ -1,3 +1,4 @@
+import os
 import math
 import calendar
 import datetime
@@ -5,9 +6,6 @@ import configparser
 
 from flask import Flask, render_template, abort, jsonify
 from pymongo import MongoClient
-
-config = configparser.ConfigParser()
-config.read('config.ini')
 
 TITLE = 'DevDiary - samhattangady'
 BLOG_LIMIT = {'chars': 300, 'number': 2}
@@ -126,7 +124,7 @@ def format_dates(date):
 #####################################################################
 # Server stuff
 #####################################################################
-mongo = str(config.get('database', 'mongohost'))
+mongo = os.environ.get('MONGODB')
 app = Flask(__name__)
 db = MongoClient(mongo).get_default_database()
 
@@ -177,4 +175,4 @@ def project_blogs(project):
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
