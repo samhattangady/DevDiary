@@ -1,9 +1,12 @@
 <!-- Printing out all the posts -->
 {% for post in posts[:limit['number']] %}
+    <hr>
     <div style="clear: both">
-        <h4 class="header-text" style="float: left"><a href="/blog/{{post['_id']}}">{{post['title']}}</a></h4> 
-        <h5 class="header-text" style="float: right">{{post['tags'][0]}} : {{post['date']}}</h5><br><br>
+        <h4 class="header-text"><a href="/blog/{{post['_id']}}">{{post['title']}}</a></h4> 
+        <p class="header-text blog-post-date align-right">{{post['tags'][0]}} : {{post['date']}}</p>
+        <section>
         <p class="regular-text">{{post['text'][:limit['chars']]}}<a href="/blog/{{post['_id']}}">...    (read on)</a></p>
+        </section>
     </div>
 {% endfor %}
 

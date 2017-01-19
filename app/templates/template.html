@@ -16,7 +16,7 @@
     <link href="https://fonts.googleapis.com/css?family=Architects+Daughter|Arvo" rel="stylesheet">
 
   </head>
-  <body onload="draw({{calendar}})">
+  <body {% if calendar %} onload="draw({{calendar}})" {% endif %}>
     <div class="container">
 
       <!-- Logo -->
@@ -36,6 +36,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="/static/js/bootstrap.min.js"></script>
+    {% if calendar %}
     <script src="/static/js/calendar_script.js"></script>
+    {% endif %}
   </body>
 </html>

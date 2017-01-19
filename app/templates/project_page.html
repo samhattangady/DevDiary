@@ -7,12 +7,14 @@
         <h2 class="align-center header-text">{{details['name']}}</h2>
         <h4 class="align-center regular-text">{{details['description']}}</h4>
         <p class="align-center regular-text">{{details['start']}} to {{details['completion']}}</p>
-        <p class="align-center regular-text"><a href="{{details['link']}}">{{details['link']}}</a></p>
+        <p class="align-center regular-text"><a href="{{details['link']}}">
+        {% if 'github' in details['link'] %}Github {% endif %}Link</a></p>
 
         <div>
             {% include 'blog.html' %}
         </div>
 
+        <hr>
         <div >
             {% for update in details['updates'] %}
                 <p class="regular-text"><b>{{update['date']}}</b>: {{update['text']}}</p>

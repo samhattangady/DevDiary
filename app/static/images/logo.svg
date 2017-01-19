@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   height="111.139"
+   width="467.60999"
+   viewBox="0 0 123.72181 29.405528"
+   version="1.1"
+   id="svg4"
+   inkscape:version="0.92.0 unknown"
+   sodipodi:docname="logo.svg">
+  <defs
+     id="defs8" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1366"
+     inkscape:window-height="716"
+     id="namedview6"
+     showgrid="false"
+     inkscape:measure-start="0,0"
+     inkscape:measure-end="0,0"
+     units="px"
+     inkscape:zoom="1"
+     inkscape:cx="221.52295"
+     inkscape:cy="44.486743"
+     inkscape:window-x="0"
+     inkscape:window-y="22"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg4" />
+  <metadata
+     id="metadata2">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="g3616"
+     transform="translate(-18.25625,-50.636122)">
+    <text
+       id="text3600"
+       y="72.233391"
+       x="16.94541"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:28.22222137px;line-height:6.61458302px;font-family:Arvo;-inkscape-font-specification:Arvo;letter-spacing:0px;word-spacing:0px;fill:#cfd8dc;fill-opacity:0.94117647;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:28.22222137px;font-family:Arvo;-inkscape-font-specification:Arvo;fill:#cfd8dc;stroke-width:0.26458332px;fill-opacity:0.75294119"
+         y="72.233391"
+         x="16.94541"
+         id="tspan3598"
+         sodipodi:role="line">DevDiary</tspan></text>
+    <text
+       id="text3604"
+       y="76.072922"
+       x="45.508335"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:6.61458302px;font-family:'Architects Daughter';-inkscape-font-specification:'Architects Daughter';letter-spacing:0px;word-spacing:0px;fill:#b0bec5;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Architects Daughter';-inkscape-font-specification:'Architects Daughter';fill:#b0bec5;stroke-width:0.26458332px;fill-opacity:1"
+         y="76.072922"
+         x="45.508335"
+         id="tspan3602"
+         sodipodi:role="line">samhattangady</tspan></text>
+    <text
+       id="text3608"
+       y="78.983322"
+       x="18.256248"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:6.61458302px;font-family:'Ubuntu Mono derivative Powerline';-inkscape-font-specification:'Ubuntu Mono derivative Powerline';letter-spacing:0px;word-spacing:0px;fill:#455a64;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.65666676px;font-family:Arvo;-inkscape-font-specification:Arvo;fill:#78909c;stroke-width:0.26458332px"
+         y="78.983322"
+         x="18.256248"
+         id="tspan3606"
+         sodipodi:role="line">Diary to log progress on my different personal projects</tspan></text>
+  </g>
+</svg>
