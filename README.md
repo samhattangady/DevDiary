@@ -4,3 +4,5 @@ DevDiary is a website that is meant to track my development work on personal pro
 It is built in Flask, using Bootstrap, and hosted on heroku.
 
 It also has a CLI that can be used to update the blog - devdiary.py
+
+The website is live at https://devdiary-samhattangady.herokuapp.com/
