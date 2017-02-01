@@ -87,7 +87,7 @@ def main():
         add_update(project, text, date)
         print('Update added succesfully!')
 
-    if args.new:
+    elif args.new:
         name = input('Input project name:\n')
         description = input('Input project description:\n')
         link = input('Input project link:\n')
@@ -95,16 +95,20 @@ def main():
         new_project(name, description, date, link)
         print('New project created succesfully!')
 
-    if args.complete:
+    elif args.complete:
         complete_project(get_project(), get_date())
         print('Congrats on completing your project!')
 
-    if args.blogpost_path:
+    elif args.blogpost_path:
         post = open(args.blogpost_path, 'r').read()
         print(post)
         title = input('Input title of post:\n')
         add_blogpost(get_project(), title, get_date(), post)
         print('Blog updated succesfully!')
+        
+    else:
+         print('No option selected. Use -h argument for help')
+
 
 
 if __name__ == '__main__':
